@@ -1,0 +1,50 @@
+### Register
+POST http://localhost:8080/api/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username" : "adlan",
+  "password" : "rahasia",
+  "name" : "adlan jazuli"
+}
+
+### Login
+POST http://localhost:8080/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+"username" : "adlan",
+"password" : "rahasia"
+}
+
+### Get User
+GET http://localhost:8080/api/users/current
+Accept: application/json
+X-API-TOKEN: 324f4311-a960-4dae-8017-6056b33af04b
+
+
+### Update User
+PATCH http://localhost:8080/api/users/current
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 324f4311-a960-4dae-8017-6056b33af04b
+
+{
+  "name" : "muhammad adlan"
+}
+
+
+### Create Contact
+POST http://localhost:8080/api/contacts
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 324f4311-a960-4dae-8017-6056b33af04b
+
+{
+  "firstName" : "joko",
+  "lastName" : "rahasia",
+  "email" : "joko@example.com",
+  "phone" : "081512345432"
+}
